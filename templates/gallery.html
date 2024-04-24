@@ -1,0 +1,275 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>🔍 gowitness - a golang screenshotting tool by @leonjza</title>
+  <meta name="msapplication-TileColor" content="#206bc4" />
+  <meta name="theme-color" content="#206bc4" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <link rel="icon" href='/favicon.ico' type="image/x-icon" />
+  <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon" />
+  <meta name="description" content="gowitness - a golang, web screenshot utility using Chrome Headless" />
+  <meta name="twitter:site" content="@leonjza">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="gowitness">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:site_name" content="Tabler">
+  <meta property="og:type" content="object">
+  <meta property="og:title" content="gowitness">
+  <meta property="og:description" content="gowitness - a golang, web screenshot utility using Chrome Headless">
+
+  <link href='assets/tabler.min.css' rel="stylesheet" />
+</head>
+
+<body class=" layout-fluid theme-dark">
+  <div class="page">
+
+
+
+
+
+    <div class="navbar-expand-md">
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <div class="navbar navbar-light">
+          <div class="container-xl" style="display: flex; flex-wrap: wrap;justify-content: flex-start;">
+            <ul class="navbar-nav">
+
+
+
+              <li class="nav-item">
+                <a class="nav-link" href='gallery.html'>
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                      stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <polyline points="9 11 12 14 20 6" />
+                      <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" />
+                    </svg>
+                  </span>
+                  <span class="nav-link-title">
+                    Gallery View
+                  </span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href='table.html'>
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list" width="24"
+                      height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <line x1="9" y1="6" x2="20" y2="6"></line>
+                      <line x1="9" y1="12" x2="20" y2="12"></line>
+                      <line x1="9" y1="18" x2="20" y2="18"></line>
+                      <line x1="5" y1="6" x2="5" y2="6.01"></line>
+                      <line x1="5" y1="12" x2="5" y2="12.01"></line>
+                      <line x1="5" y1="18" x2="5" y2="18.01"></line>
+                    </svg>
+                  </span>
+                  <span class="nav-link-title">
+                    Table View
+                  </span>
+                </a>
+              </li>
+
+<li class="nav-item">
+                <a class="nav-link" href='perception.html'>
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+<svg width="90" height="90">
+     <image xlink:href="assets/brain2.svg" src="assets/brain2.svg" width="24" height="24"/>
+</svg>
+
+                  </span>
+                  <span class="nav-link-title">
+                    Perception View
+                  </span>
+                </a>
+              </li>
+
+            </ul>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-wrapper">
+
+
+
+<div class="container-xl">
+
+  <div class="page-header d-print-none">
+    <div class="row g-2 align-items-center">
+      <div class="col">
+
+        <div class="page-pretitle">
+          {{ screenshots|length }} URLs
+        </div>
+        <h2 class="page-title">
+          Gallery View
+        </h2>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="container-xl">
+
+      <div class="box">
+      <div class="card">
+        <div class="table-responsive">
+          <table class="table table-hover table-sm table-vcenter card-table">
+            <thead>
+              <tr>
+                <th style="display: flex; align-items: center;">
+  Code
+  <div style="margin-left: 10px; flex-shrink: 0;">
+    <select class="form-select" id="responseCodeFilter" style="max-width: 100%;">
+      <option value="all" selected>All</option>
+      <option value="2XX">2XX</option>
+      <option value="3XX">3XX</option>
+      <option value="4XX">4XX</option>
+      <option value="5XX">5XX</option>
+    </select>
+  </div>
+</th>
+
+
+              </tr>
+            </thead>
+
+          </table>
+        </div>
+      </div>
+    </div>
+      <br>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row card-grid" >
+
+
+
+
+      {% for screenshot in screenshots %}
+      <div class="card-grid col-sm-6 col-md-6 col-lg-4 col-xl-2">
+
+        <div class="card card-sm">
+
+            <a href='screenshots/{{ screenshot.Filename }}' target="_blank" class="d-block">
+              <img loading="lazy" src='screenshots/{{ screenshot.Filename }}'
+                onerror="this.onerror=null; this.src='../assets/blank.png'" class="card-img-top"/>
+            </a>
+
+
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <div>
+                <div><a href='{{ screenshot.URL }}' target="_blank">{{ screenshot.URL }}</a></div>
+                <div class="text-muted">{{ screenshot.Title }}</div>
+                {% if screenshot.ResponseCode >= 200 and screenshot.ResponseCode < 300 %}
+                    <span class="badge bg-success">{{ screenshot.ResponseCode }}</span>
+                  {% elif screenshot.ResponseCode >= 300 and screenshot.ResponseCode < 400 %}
+                    <span class="badge bg-warning">{{ screenshot.ResponseCode }}</span>
+                  {% elif screenshot.ResponseCode >= 400 %}
+                    <span class="badge bg-danger">{{ screenshot.ResponseCode }}</span>
+                  {% endif %}
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+
+    </div>
+
+    <hr>
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer footer-transparent d-print-none">
+        <div class="container-xl">
+          <div class="row text-center align-items-center flex-row-reverse">
+            <div class="col-lg-auto ms-lg-auto">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item"><a href="https://github.com/sensepost/gowitness" target="_blank"
+                    class="link-secondary" rel="noopener">Source code</a></li>
+                <li class="list-inline-item">
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+  <script src='assets/tabler.min.js'></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const filterSelect = document.getElementById('responseCodeFilter');
+  const cardsContainer = document.querySelector('.card-grid');
+  const cards = Array.from(cardsContainer.children); // Собираем все карточки в массив
+
+  filterSelect.addEventListener('change', function () {
+    const selectedFilter = this.value;
+    let filteredCards = [];
+
+    // Определяем диапазон кодов ответа
+    const rangeStart = selectedFilter === 'all' ? 0 : parseInt(selectedFilter.substring(0, 1)) * 100;
+    const rangeEnd = selectedFilter === 'all' ? 999 : rangeStart + 99;
+
+    // Фильтруем карточки
+    filteredCards = cards.filter(card => {
+      const responseCode = parseInt(card.querySelector('.badge').textContent.trim());
+      return selectedFilter === 'all' || (responseCode >= rangeStart && responseCode <= rangeEnd);
+    });
+
+    // Очищаем контейнер и добавляем отфильтрованные карточки
+    cardsContainer.innerHTML = '';
+    filteredCards.forEach(card => cardsContainer.appendChild(card));
+  });
+});
+</script>
+
+
+
+</body>
+
+</html>
