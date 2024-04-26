@@ -2,12 +2,13 @@
 
 This is a project that uses python3 and jinja2. By communicating with the gowitness API it retrieves screenshot information and produces more convenient static reports.
 
+
 Current features:
-- Screenshot filtering by status codes
+- Screenshot filtering by status codes 
 - Grouping screenshots by similarity based on perception hashes
+- Viewing a screenshot through a separate modal window
 
-
-![](https://raw.githubusercontent.com/mk13337/gowitness/master/images/demo2.gif)
+![](https://raw.githubusercontent.com/mk13337/gowitness/master/images/main_demo.gif)
 
 
 ## Project Usage
